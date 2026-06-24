@@ -1,0 +1,151 @@
+---
+---
+
+// ── Palette ──────────────────────────────────────────────
+$background-color:   #0a0a0a;
+$surface-color:      #141414;
+$border-color:       #222222;
+$text-color:         #e0e0e0;
+$muted-color:        #777777;
+$brand-color:        #ff9500;   // amber — warm like studio hardware
+$brand-dark:         #cc7700;
+$link-visited:       #cc7700;
+$code-background:    #111111;
+
+// ── Override minima vars before import ───────────────────
+$grey-color:         #666666;
+$grey-color-light:   $border-color;
+$grey-color-dark:    #aaaaaa;
+
+@import "minima";
+
+// ── Base ─────────────────────────────────────────────────
+* { box-sizing: border-box; }
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+// ── Header ───────────────────────────────────────────────
+.site-header {
+  background-color: $surface-color;
+  border-top: 3px solid $brand-color;
+  border-bottom: 1px solid $border-color;
+  padding: 14px 0;
+
+  .site-title {
+    color: $brand-color;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    &:visited { color: $brand-color; }
+    &:hover { color: #ffb84d; text-decoration: none; }
+  }
+
+  .site-nav {
+    .page-link { color: $text-color; }
+    .page-link:hover { color: $brand-color; }
+  }
+}
+
+// ── Footer ───────────────────────────────────────────────
+.site-footer {
+  background-color: $surface-color;
+  border-top: 1px solid $border-color;
+  color: $muted-color;
+  font-size: 0.85rem;
+
+  a { color: $muted-color; }
+  a:hover { color: $brand-color; }
+}
+
+// ── Links ────────────────────────────────────────────────
+a { color: $brand-color; }
+a:visited { color: $link-visited; }
+a:hover { color: #ffb84d; }
+
+// ── Post list ────────────────────────────────────────────
+.post-list {
+  li { border-bottom: 1px solid $border-color; padding-bottom: 1.5rem; }
+  h3 a { color: $text-color; }
+  h3 a:hover { color: $brand-color; }
+}
+
+.post-meta {
+  color: $muted-color;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+// ── Post ─────────────────────────────────────────────────
+.post-title { color: $text-color; }
+
+.post-content {
+  h1, h2, h3, h4 { color: $text-color; border-bottom: 1px solid $border-color; padding-bottom: 0.3em; }
+}
+
+// ── Code ─────────────────────────────────────────────────
+code {
+  background-color: $code-background;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  color: #d4d4d4;
+  font-family: "JetBrains Mono", "Fira Code", "Menlo", monospace;
+  font-size: 0.85em;
+  padding: 0.1em 0.4em;
+}
+
+pre {
+  background-color: $code-background;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  line-height: 1.6;
+
+  code {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font-size: 0.88rem;
+    color: #d4d4d4;
+  }
+}
+
+// nuke any leftover highlight wrapper styles
+.highlight {
+  background: $code-background !important;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+
+  pre { border: none; margin: 0; }
+  span { background: transparent !important; color: inherit; }
+  table { margin: 0; border: none; }
+  td { padding: 0; border: none; }
+}
+
+// ── Blockquote ───────────────────────────────────────────
+blockquote {
+  border-left: 3px solid $brand-color;
+  color: $muted-color;
+  background-color: $surface-color;
+  padding: 0.5rem 1rem;
+}
+
+// ── HR ───────────────────────────────────────────────────
+hr { border-color: $border-color; }
+
+// ── Comments ─────────────────────────────────────────────
+.comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border-color;
+}

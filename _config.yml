@@ -1,0 +1,14 @@
+title: vijaYE-bass
+description: Music production notes
+url: "https://vijaye-bass.github.io"
+theme: minima
+
+author: vijaYE-bass
+
+show_excerpts: true
+
+plugins:
+  - jekyll-feed
+
+kramdown:
+  syntax_highlighter: none
